@@ -3,6 +3,6 @@
   "outputDirectory": ".next",
   "framework": "nextjs",
   "env": {
-    "NEXT_PUBLIC_SITE_URL": "@hrithik-dev",
+    "NEXT_PUBLIC_SITE_URL": "@hrithik-dev"
   }
 }
