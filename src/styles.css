@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 0.75rem;
+  /* Dark theme by default — premium portfolio */
+  --background: oklch(0.145 0.01 280);
+  --foreground: oklch(0.98 0.005 280);
+  --card: oklch(0.18 0.015 280);
+  --card-foreground: oklch(0.98 0.005 280);
+  --popover: oklch(0.18 0.015 280);
+  --popover-foreground: oklch(0.98 0.005 280);
+  --primary: oklch(0.62 0.25 295);          /* neon purple #7C3AED */
+  --primary-foreground: oklch(0.98 0.005 280);
+  --secondary: oklch(0.25 0.02 280);
+  --secondary-foreground: oklch(0.98 0.005 280);
+  --muted: oklch(0.22 0.015 280);
+  --muted-foreground: oklch(0.7 0.02 280);
+  --accent: oklch(0.72 0.15 210);           /* electric blue #06B6D4 */
+  --accent-foreground: oklch(0.145 0.01 280);
+  --destructive: oklch(0.65 0.22 25);
+  --destructive-foreground: oklch(0.98 0.005 280);
+  --border: oklch(1 0 0 / 8%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.62 0.25 295);
+  --neon: oklch(0.62 0.25 295);
+  --electric: oklch(0.72 0.15 210);
+
+  --gradient-primary: linear-gradient(135deg, oklch(0.62 0.25 295), oklch(0.72 0.15 210));
+  --gradient-radial: radial-gradient(ellipse at top, oklch(0.62 0.25 295 / 0.18), transparent 60%);
+  --gradient-text: linear-gradient(135deg, #fff 0%, #c4b5fd 50%, #67e8f9 100%);
+  --shadow-glow: 0 0 60px -10px oklch(0.62 0.25 295 / 0.5);
+  --shadow-glow-blue: 0 0 60px -10px oklch(0.72 0.15 210 / 0.45);
+  --shadow-card: 0 10px 40px -10px oklch(0 0 0 / 0.5);
+
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, oklch(0.62 0.25 295 / 0.15), transparent),
+      radial-gradient(ellipse 60% 40% at 80% 20%, oklch(0.72 0.15 210 / 0.08), transparent);
+    background-attachment: fixed;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  .glass {
+    background: oklch(0.2 0.015 280 / 0.5);
+    backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid oklch(1 0 0 / 0.08);
+  }
+  .glass-strong {
+    background: oklch(0.18 0.015 280 / 0.75);
+    backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid oklch(1 0 0 / 0.1);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-gradient-brand {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-gradient-brand {
+    background: var(--gradient-primary);
+  }
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+  .glow-blue {
+    box-shadow: var(--shadow-glow-blue);
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(oklch(1 0 0 / 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(1 0 0 / 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+@keyframes blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+.animate-blob { animation: blob 12s ease-in-out infinite; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, oklch(1 0 0 / 0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2.5s linear infinite;
+}
