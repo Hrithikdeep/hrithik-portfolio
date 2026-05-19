@@ -9,16 +9,6 @@ const solarSolutionsSrc = solarSolutions.src;
 const solarTrustSrc = solarTrust.src;
 const solarCalculatorSrc = solarCalculator.src;
 const solarFooterSrc = solarFooter.src;
-const cwubPortalImage =
-  "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1600&q=80";
-const cwubDashboardImage =
-  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80";
-const cwubMobileImage =
-  "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80";
-const cwubReportsImage =
-  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80";
-const cwubIdentityImage =
-  "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1600&q=80";
 
 export type CaseStudy = {
   subtitle: string;
@@ -103,10 +93,11 @@ export const projects: Project[] = [
     solution:
       "I architected and built a complete digital ecosystem: responsive web portal, Flutter mobile app, powerful admin dashboard, and QR-based verification system — reducing manual work by 80% while adding security and transparency.",
     tech: ["React", "Node.js", "Express", "Flutter", "MongoDB", "PostgreSQL", "Docker", "AWS"],
-    image: cwubPortalImage,
+    image: "/images/welfare-platform/homepage.png",
+    demoVideo: "https://www.youtube.com/embed/oeO_t4X_vxk",
     screenshots: [
-      cwubPortalImage,
-      cwubDashboardImage,
+      "/images/welfare-platform/homepage.png",
+      "/images/welfare-platform/admin-dashboard.png",
     ],
     accent: "blue",
     caseStudy: {
@@ -114,7 +105,7 @@ export const projects: Project[] = [
         "A comprehensive digital welfare platform serving 10,000+ construction workers with QR verification, mobile app, and real-time admin control.",
       overview:
         "Designed and developed a production-grade full-stack system for Construction Worker Union Bihar (CWUB). The platform enables worker registration, digital identity verification via QR codes, mobile-first access, and centralized admin management. Built to handle 10,000+ concurrent users with real-time analytics and audit trails.",
-      overviewImage: cwubPortalImage,
+      overviewImage: "/images/welfare-platform/homepage.png",
       problems: [
         { title: "Manual paper-based registration", icon: "📄" },
         { title: "Rampant fraud & fake IDs", icon: "🚫" },
@@ -123,7 +114,7 @@ export const projects: Project[] = [
       ],
       solutionText:
         "Built a complete digital ecosystem with online registration, QR-based verification, mobile app for workers, and a comprehensive admin dashboard. Implemented secure authentication, role-based access control, real-time analytics, and automated approval workflows. The system is scalable to 10,000+ users and optimized for low-bandwidth regions.",
-      solutionImage: cwubDashboardImage,
+      solutionImage: "/images/welfare-platform/admin-dashboard.png",
       keyFeatures: [
         { title: "QR Digital ID Card", icon: "🆔" },
         { title: "Online Registration", icon: "📝" },
@@ -132,7 +123,7 @@ export const projects: Project[] = [
         { title: "Real-time Analytics", icon: "📈" },
         { title: "Agent Management", icon: "👥" },
       ],
-      featuresImage: cwubDashboardImage,
+      featuresImage: "/images/welfare-platform/admin-dashboard.png",
       techGroups: [
         { label: "Frontend", items: ["React", "Tailwind CSS", "Vite"] },
         { label: "Backend", items: ["Node.js", "Express", "REST API"] },
@@ -160,14 +151,14 @@ export const projects: Project[] = [
         "Performance optimization for 10,000+ users",
       ],
       gallery: [
-        { src: cwubPortalImage, caption: "Public Website Homepage\nPublic-facing registration and verification portal for labour welfare services." },
-        { src: cwubDashboardImage, caption: "Registration Forms Section\nMultiple onboarding methods including online registration, PDF forms, and agent-assisted workflows." },
-        { src: cwubMobileImage, caption: "Verification System\nSecure labour identity verification with searchable registration records." },
-        { src: cwubDashboardImage, caption: "Admin Dashboard\nCentralized monitoring dashboard with worker analytics and approval workflows." },
-        { src: cwubPortalImage, caption: "Worker Registration Panel\nAdmin-controlled onboarding system for worker profile management." },
-        { src: cwubReportsImage, caption: "Reports & Analytics\nOperational insights with weekly, monthly, and yearly reporting." },
-        { src: cwubMobileImage, caption: "Flutter Mobile App Dashboard\nMobile-first workforce management application for field agents." },
-        { src: cwubIdentityImage, caption: "Digital QR Identity Card\nQR-enabled labour identity card for instant digital verification." },
+        { src: "/images/welfare-platform/homepage.png", caption: "Public Portal\nPublic-facing registration and verification portal for labour welfare services." },
+        { src: "/images/welfare-platform/registration-form.png", caption: "Registration Forms\nMultiple onboarding methods including online registration and agent-assisted workflows." },
+        { src: "/images/welfare-platform/verification-system.png", caption: "Verification System\nSecure labour identity verification with searchable registration records." },
+        { src: "/images/welfare-platform/admin-dashboard.png", caption: "Admin Dashboard\nCentralized monitoring dashboard with worker analytics and approval workflows." },
+        { src: "/images/welfare-platform/worker-panel.png", caption: "Worker Panel\nWorker-controlled onboarding and profile management system." },
+        { src: "/images/welfare-platform/reports-analytics.png", caption: "Reports & Analytics\nOperational insights with comprehensive reporting and analytics." },
+        { src: "/images/welfare-platform/mobile-app.png", caption: "Mobile App\nMobile-first application for field agents and worker access." },
+        { src: "/images/welfare-platform/qr-card.png", caption: "Digital QR Card\nQR-enabled labour identity card for instant digital verification." },
       ],
       videoTitle: "System Demo",
       videoDesc: "Complete walkthrough of registration, verification, and admin dashboard.",
